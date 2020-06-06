@@ -1,3 +1,13 @@
-.form {
+.form-container {
   padding: 75px 200px;
+  border-style: solid;
+  border-color: #073642;
 }
+
+.btn.btn-primary {
+  width: 125px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
