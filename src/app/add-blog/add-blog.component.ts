@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl} from '@angular/forms';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-add-blog',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddBlogComponent implements OnInit {
 
-  constructor() { }
+  public title = new FormControl('');
+  public content = new FormControl('');
+
+  constructor(
+      private route: Router
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  public submitForm() {
+    localStorage.setItem('title', this.title.value);
+    localStorage.setItem('content', this.content.value);
+
+    this.route.navigate(['']);
   }
 
 }

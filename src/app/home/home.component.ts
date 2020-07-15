@@ -8,6 +8,9 @@ import {ConfigService} from "../config.service";
 })
 export class HomeComponent implements OnInit {
 
+  public title;
+  public content;
+
   public myPostData;
 
   constructor(private configService: ConfigService) {
@@ -15,9 +18,11 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.title = localStorage.getItem('title');
+    this.content = localStorage.getItem('content');
   }
 
-  getPostData(){
+  getPostData() {
     this.configService.getConfig().subscribe((jsonData) => {
       this.myPostData = jsonData;
     });
