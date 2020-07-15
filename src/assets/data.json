@@ -1,0 +1,16 @@
+{
+  "name": "Miraj",
+  "menu_1": "My Home",
+  "menu_2": "Contacts",
+  "menu_3": "Add-BLog",
+  "posts": [
+    {
+      "title": "Running your Angular Application with the CLI",
+      "content": "The Cli helps you to start your application in your default browser using the following command.<br>\n        <code>ng serve</code>"
+    },
+    {
+      "title": "Installing Angular-CLI\n",
+      "content": "First you need to have node.js and npm installed in your machine. Then you can use npm to install the cli by using following command in command line:<br><code>npm install -g @angular/cli</code>"
+    }
+  ]
+}

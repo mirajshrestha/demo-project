@@ -4,10 +4,8 @@
       Beginner Steps
     </div>
     <div class="card-body">
-      <h5 class="card-title">Installing Angular-CLI</h5>
-      <p class="card-text">
-        First you need to have <i>node.js</i> and <i>npm</i> installed in your machine. Then you can use npm to install the cli by using following command in command line:
-        <br><code>npm install -g @angular/cli</code>
+      <h5 class="card-title">{{myPostData?.posts[1].title}}</h5>
+      <p class="card-text" [innerHTML]="myPostData?.posts[1].content">
       </p>
     </div>
   </div>
@@ -40,16 +38,15 @@
       </p>
     </div>
   </div>
-</div><div class="content">
+</div>
+<div class="content">
   <div class="card">
     <div class="card-header">
       Beginner Steps
     </div>
     <div class="card-body">
-      <h5 class="card-title">Running your Angular Application with the CLI</h5>
-      <p class="card-text">
-        The Cli helps you to start your application in your default browser using the following command.<br>
-        <code>ng serve</code>
+      <h5 class="card-title">{{ myPostData?.posts[0].title }}</h5>
+      <p class="card-text" [innerHTML]="myPostData?.posts[0].content">
       </p>
     </div>
   </div>
