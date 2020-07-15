@@ -9,8 +9,8 @@ import {Router} from "@angular/router";
 })
 export class AddBlogComponent implements OnInit {
 
-  public title = new FormControl('');
-  public content = new FormControl('');
+  public formTitle = new FormControl('');
+  public formContent = new FormControl('');
 
   constructor(
       private route: Router
@@ -20,8 +20,14 @@ export class AddBlogComponent implements OnInit {
   }
 
   public submitForm() {
-    localStorage.setItem('title', this.title.value);
-    localStorage.setItem('content', this.content.value);
+
+    let titles = JSON.parse(localStorage.getItem('titles')); // Open storage and covert to array
+    if(titles == null){
+      titles = [];
+    }
+
+    titles.push(this.formTitle.value); // Add title
+    localStorage.setItem('titles', JSON.stringify(titles)); // Convert to string and save to storage
 
     this.route.navigate(['']);
   }

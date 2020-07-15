@@ -8,8 +8,7 @@ import {ConfigService} from "../config.service";
 })
 export class HomeComponent implements OnInit {
 
-  public title;
-  public content;
+  public titles;
 
   public myPostData;
 
@@ -18,8 +17,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.title = localStorage.getItem('title');
-    this.content = localStorage.getItem('content');
+    this.titles = JSON.parse(localStorage.getItem('titles'));
   }
 
   getPostData() {

@@ -1,15 +1,16 @@
-<div class="content">
+<div class="content" *ngFor="let title of titles">
   <div class="card">
     <div class="card-header">
-      Beginner Steps
+      {{title}}
     </div>
+    
     <div class="card-body">
-      <h5 class="card-title">{{title}}</h5>
-      <p class="card-text" [innerHTML]="content">
-      </p>
+      <p class="card-text">-</p>
     </div>
   </div>
 </div>
+
+
 <div class="content">
   <div class="card">
     <div class="card-header">
