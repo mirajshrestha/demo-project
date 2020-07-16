@@ -26,4 +26,11 @@ export class HomeComponent implements OnInit {
     });
   }
 
+  removeBlog(title) {
+    let index = this.titles.indexOf(title);
+    this.titles.splice(index, 1);
+    localStorage.setItem("titles",JSON.stringify(this.titles));
+  }
+
+
 }
