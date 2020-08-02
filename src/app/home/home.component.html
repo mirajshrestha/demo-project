@@ -2,11 +2,12 @@
   <div class="card">
     <div class="card-header">
       {{title}}
+      <i class="fa fa-pencil" aria-hidden="true" style="margin-left: 10px;"></i>
       <span style="float: right; color: red;" (click)="removeBlog(title)">X</span>
     </div>
-    
-    <div class="card-body">
-      <p class="card-text">-</p>
+
+    <div class="card-body" *ngFor="let content of contents">
+      <p class="card-text">{{content}}</p>
     </div>
   </div>
 </div>

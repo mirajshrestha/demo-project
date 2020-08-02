@@ -30,6 +30,20 @@ export class AddBlogComponent implements OnInit {
     localStorage.setItem('titles', JSON.stringify(titles)); // Convert to string and save to storage
 
     this.route.navigate(['']);
+
+
+
+
+      let contents = JSON.parse(localStorage.getItem('contents')); // Open storage and covert to array
+      if(contents == null){
+          contents = [];
+      }
+
+      contents.push(this.formContent.value); // Add title
+      localStorage.setItem('contents', JSON.stringify(contents)); // Convert to string and save to storage
+
+      this.route.navigate(['']);
+
   }
 
 }
